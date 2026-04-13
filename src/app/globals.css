@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --shadow-soft: 0 10px 30px rgba(2, 6, 23, 0.08);
+}
+
+body {
+  margin: 0;
+}
