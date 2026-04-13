@@ -1,50 +1,5 @@
 # URL Shortener Frontend Assignment (2–3 hours)
 
-This repository includes the Go/Gin backend at the repository root and a Next.js frontend under `src/`.
-
-## Running the full stack
-
-1. **Backend** (terminal one), from the repo root:
-
-```bash
-go run .
-```
-
-The service listens on `http://localhost:8080`.
-
-2. **Frontend** (terminal two):
-
-```bash
-npm install
-```
-
-Copy `.env.example` to `.env.local` and adjust if your API is not on port 8080. On Windows PowerShell you can run `Copy-Item .env.example .env.local`.
-
-```bash
-npm run dev
-```
-
-Open `http://localhost:3000`. If `NEXT_PUBLIC_API_BASE_URL` is unset, the client defaults to `http://localhost:8080`.
-
-### Frontend scripts
-
-| Command | Purpose |
-| --- | --- |
-| `npm run dev` | Next.js dev server |
-| `npm run build` | Production build |
-| `npm run start` | Production server |
-| `npm run lint` | ESLint |
-| `npm test` | Jest unit tests |
-| `npm run test:coverage` | Jest with coverage |
-
-### Endpoints used by the frontend
-
-- `POST /api/shortlinks` — body `{ "original_url": "https://..." }`; response includes `id`, `original_url`, `short_url`, `created_at` (ISO 8601 string from the client’s perspective).
-- `GET /api/shortlinks` — list of the same objects.
-- `GET /shortlinks/:id` — redirect to the original URL (used when opening or testing a short link).
-
----
-
 📌 **Objective**
 Build a Next.js frontend application that interfaces with a URL shortener backend service. This exercise tests component architecture, state management, API integration, server-side rendering, and user experience design.
 
