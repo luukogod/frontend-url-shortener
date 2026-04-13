@@ -23,16 +23,6 @@ Health: `GET /health`
 npm install
 ```
 
-Copy environment defaults (adjust if your API host/port differs):
-
-```bash
-# Windows PowerShell
-Copy-Item .env.example .env.local
-
-# macOS / Linux
-cp .env.example .env.local
-```
-
 ```bash
 npm run dev
 ```
